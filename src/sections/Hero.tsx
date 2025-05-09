@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             <div className="mb-6 md:mb-0 md:mr-10">
               <img
                 className="h-[300px] md:h-[350px] w-auto rounded-[25px] object-cover"
-                src="/new.jpg"
+                src="https://github.com/harshad-k-135/harshad-k-135/blob/main/new.jpg?raw=true"
                 alt="Harshad Karle"
               />
             </div>
