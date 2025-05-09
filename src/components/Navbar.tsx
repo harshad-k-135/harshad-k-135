@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 font-bold text-xl tracking-tighter cursor-pointer" onClick={() => scrollToSection('hero')}>
-            <span className="text-indigo-600 dark:text-indigo-400">Chill</span>Ace
+            <span className="text-indigo-600 dark:text-indigo-400">Harshad</span>.Karle
           </div>
           
           {/* Desktop menu */}
