@@ -9,13 +9,14 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-      <div className="p-6 flex-grow">
+     <a  href={project.githubUrl} >
+       <div className="p-6 flex-grow">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-bold text-gray-900 dark:text-white">{project.title}</h3>
           <div className="flex space-x-2">
-            {project.githubUrl && (
+            {/* {project.githubUrl && (
               <a 
-                href={project.githubUrl} 
+                href={project.githubUrl}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors"
@@ -23,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               >
                 <Github size={20} />
               </a>
-            )}
+            )} */}
             {project.liveUrl && (
               <a 
                 href={project.liveUrl} 
@@ -49,6 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           ))}
         </div>
       </div>
+     </a>
     </div>
   );
 };
