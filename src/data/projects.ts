@@ -26,4 +26,10 @@ export const projects: Project[] = [
     technologies: ['Python', 'PyTorch', 'Librosa', 'RAVDESS'],
     githubUrl: 'https://github.com/harshad-k-135/emotion_analysis',
   },
+  {
+    title: 'Autonomous Vehicular Simulation',
+    description: 'This project creates an AI-driven vehicular simulation demonstrating autonomous driving via adaptive speed, real-time navigation, and traffic awareness.',
+    technologies: ['Blender', 'C#', 'Flask', 'Pandas', 'Python', 'Unity'],
+    githubUrl: 'https://github.com/harshad-k-135/autonomous_vehicular_simulation',
+  },
 ];
