@@ -3,9 +3,9 @@ import { Project } from '../types/types';
 export const projects: Project[] = [
   {
     title: 'K-Map Solver',
-    description: 'K-Map Solver is a C++ program that simplifies Boolean expressions using minterms or truth tables, suitable for digital logic design students and professionals.',
+    description: 'K-Map Solver is solution that simplifies Boolean expressions using minterms or maxterms, suitable for digital logic design students and professionals.',
     technologies: ['Python', 'C++', 'JavaScript'],
-    githubUrl: 'https://github.com/Ayush07Kulkarni/KmapSolver',
+    githubUrl: 'https://www.kmapsolver.com',
   },
   
   {
@@ -19,12 +19,6 @@ export const projects: Project[] = [
     description: 'A gesture-controlled mouse pointer using computer vision. System tracks hand gestures to control the mouse pointer.',
     technologies: ['Python', 'OpenCV', 'MediaPipe'],
     githubUrl: 'https://github.com/harshad-k-135/gesture-controlled-pointer',
-  },
-  {
-    title: 'Emotion Analysis',
-    description: 'This project uses Python libraries and machine learning techniques to predict emotions from audio data.',
-    technologies: ['Python', 'PyTorch', 'Librosa', 'RAVDESS'],
-    githubUrl: 'https://github.com/harshad-k-135/emotion_analysis',
   },
   {
     title: 'Autonomous Vehicular Simulation',
