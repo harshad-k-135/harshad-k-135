@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                 </button>
               ))}
               <a
-                href="https://drive.google.com/file/d/1aUgDkeTEDP3xjZLsfT2H6MQq3EpkNTDd/view?usp=sharing"
+                href="https://drive.google.com/file/d/1jjIQqvf4Q86Tphwhbky7FSIoqatMYNPm/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 font-medium transition-colors"
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
             </button>
           ))}
           <a
-            href="https://drive.google.com/file/d/1aUgDkeTEDP3xjZLsfT2H6MQq3EpkNTDd/view?usp=sharing"
+            href="https://drive.google.com/file/d/1jjIQqvf4Q86Tphwhbky7FSIoqatMYNPm/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"
