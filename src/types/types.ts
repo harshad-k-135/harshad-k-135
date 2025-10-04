@@ -7,6 +7,13 @@ export interface Project {
   imageUrl?: string;
 }
 
+export interface Articles {
+  title: string;
+  description: string;
+  mediumUrl?: string;
+}
+
+
 export interface SocialLink {
   name: string;
   url: string;

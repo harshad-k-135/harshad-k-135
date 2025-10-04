@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
           {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              {['About', 'Projects', 'Contact'].map((item) => (
+              {['About', 'Projects', 'Articles', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                 </button>
               ))}
               <a
-                href="https://drive.google.com/file/d/1jjIQqvf4Q86Tphwhbky7FSIoqatMYNPm/view?usp=sharing"
+                href="https://drive.google.com/file/d/19WGRhqhNWSNaD_nFhPzpMWdnz3ai2tPR/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 font-medium transition-colors"
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
       {/* Mobile menu */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 shadow-lg">
-          {['About', 'Projects', 'Contact'].map((item) => (
+          {['About', 'Projects', 'Articles', 'Contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
