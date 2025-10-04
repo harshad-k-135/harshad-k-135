@@ -56,7 +56,14 @@ const Navbar: React.FC = () => {
                   {item}
                 </button>
               ))}
-              
+              <a
+            href="https://drive.google.com/file/d/19WGRhqhNWSNaD_nFhPzpMWdnz3ai2tPR/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"
+          >
+          Resume
+          </a>
             </div>
           </div>
           
@@ -86,12 +93,12 @@ const Navbar: React.FC = () => {
             </button>
           ))}
           <a
-            href="https://drive.google.com/file/d/19WGRhqhNWSNaD_nFhPzpMWdnz3ai2tPR/view?usp=sharing"
+            href="https://drive.google.com/file/d/19WGRhqhNWSNaD_nFhPzpMWdnz3ai2tPR/view?usp="
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"
           >
-            Resume
+          Resume
           </a>
         </div>
       </div>
