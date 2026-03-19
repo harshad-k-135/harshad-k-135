@@ -2,28 +2,25 @@ import { Project } from '../types/types';
 
 export const projects: Project[] = [
   {
-    title: 'K-Map Solver',
-    description: 'K-Map Solver is a C++ program that simplifies Boolean expressions using minterms or truth tables, suitable for digital logic design students and professionals.',
-    technologies: ['Python', 'C++', 'JavaScript'],
-    githubUrl: 'https://github.com/Ayush07Kulkarni/KmapSolver',
-  },
-  
-  {
-    title: 'Stock Price Prediction',
-    description: 'A machine learning model that predicts stock price of next day using historical data and FF neural network.',
-    technologies: ['Python', 'Matplotlib', 'Pandas', 'Scikit-learn', 'Tensorflow', 'YFinance'],
-    githubUrl: 'https://github.com/harshad-k-135/price_prediction',
+    title: 'Groundwork AI',
+    subtitle: 'Multi-Agent Academic Research Assistant',
+    description: 'A 4-agent pipeline (Query Strategist → Literature Retriever → Web Scout → Research Synthesizer) built to eliminate hallucinated citations. The LLM is deliberately excluded from the retrieval step — agents hit ArXiv, Semantic Scholar, OpenReview, ACL, IEEE, and Springer in parallel. Outputs: inline-cited field summaries, structured JSON, PDF export, persistent search history.',
+    technologies: ['CrewAI', 'Groq', 'Llama 3.3 70B', 'FastAPI', 'React', 'ArXiv API', 'Semantic Scholar API', 'Tavily'],
+    githubUrl: 'https://github.com/harshad-k-135/groundwork_ai',
+    badge: 'Open Source',
   },
   {
-    title: 'Gesture Controlled Mouse Pointer',
-    description: 'A gesture-controlled mouse pointer using computer vision. System tracks hand gestures to control the mouse pointer.',
-    technologies: ['Python', 'OpenCV', 'MediaPipe'],
-    githubUrl: 'https://github.com/harshad-k-135/gesture-controlled-pointer',
+    title: 'Multimodal Summarization Pipeline',
+    subtitle: 'Vision-Language Research · PICT × Dr. Sheetal Sonawane',
+    description: 'Multimodal feature extraction and alignment pipeline projecting vision and language embeddings into a shared latent space using contrastive learning with clustering. Includes a cluster scoring and filtering framework for high-quality concept grounding in downstream vision-language tasks. Paper in preparation.',
+    technologies: ['PyTorch', 'HuggingFace', 'NLTK', 'Python', 'Contrastive Learning'],
+    badge: 'Research',
   },
   {
-    title: 'Emotion Analysis',
-    description: 'This project uses Python libraries and machine learning techniques to predict emotions from audio data.',
-    technologies: ['Python', 'PyTorch', 'Librosa', 'RAVDESS'],
-    githubUrl: 'https://github.com/harshad-k-135/emotion_analysis',
+    title: 'Autonomous Vehicular Simulation using AI',
+    subtitle: 'Full Self-Driving Simulator with Real-Time Inference',
+    description: 'FSD simulator with AI-driven steering, speed, and braking. Custom data logger captures simulation telemetry; ensemble Boosting models trained on logged data achieve near-perfect accuracy. Unity UI displays live model predictions feeding back into the simulation loop in real time.',
+    technologies: ['Python', 'Unity', 'C#', 'Blender', 'Flask', 'Pandas'],
+    githubUrl: 'https://github.com/harshad-k-135/autonomous_vehicular_simulation',
   },
 ];

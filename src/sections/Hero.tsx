@@ -9,6 +9,13 @@ const Hero: React.FC = () => {
     }
   };
 
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
       id="hero"
@@ -28,12 +35,29 @@ const Hero: React.FC = () => {
             <div className="mt-6 md:mt-0">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
                 <span className="block">Harshad Manish Karle</span>
-                
               </h1>
               <p className="mt-4 max-w-2xl mx-auto md:mx-0 text-xl text-gray-600 dark:text-gray-300">
-                Building intelligent systems that bridge the digital and physical worlds.
-                Passionate about AI, machine learning, and electronics.
+                I build Agentic AI systems that ship — multi-agent pipelines, 
+                multimodal research, and production CV at scale.
               </p>
+
+              {/* CTA Buttons */}
+              <div className="mt-10 flex flex-row gap-4 justify-center md:justify-start">
+                <a 
+              href="https://drive.google.com/file/d/1KVk5B0BOnCLQAkGN-hmkd68tIKW9d_sp/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-indigo-600 dark:bg-indigo-500 text-white rounded-xl shadow-lg shadow-indigo-500/20 hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-all duration-300 font-bold text-lg"
+            >
+              View Resume
+            </a>
+                <button
+                  onClick={scrollToProjects}
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-indigo-600 dark:border-indigo-500 text-indigo-600 dark:text-indigo-400 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-all duration-300 font-medium"
+                >
+                  See Projects
+                </button>
+              </div>
             </div>
 
             {/* Image */}
@@ -46,14 +70,13 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Button */}
-          <div className="mt-20 flex justify-center md:justify-center">
+          {/* Scroll Down Indicator */}
+          <div className="mt-20 flex justify-center">
             <button
               onClick={scrollToAbout}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-md shadow-md hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-all duration-300 hover:shadow-lg"
+              className="animate-bounce p-2 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
             >
-              Discover More
-              <ArrowDown size={18} />
+              <ArrowDown size={24} />
             </button>
           </div>
         </div>

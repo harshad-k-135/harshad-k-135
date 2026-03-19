@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
           {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              {['About', 'Projects', 'Articles', 'Contact'].map((item) => (
+              {['About', 'Projects', 'Publications', 'Articles', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                 </button>
               ))}
               <a
-            href="https://drive.google.com/file/d/19WGRhqhNWSNaD_nFhPzpMWdnz3ai2tPR/view?usp=sharing"
+            href="https://drive.google.com/file/d/1KVk5B0BOnCLQAkGN-hmkd68tIKW9d_sp/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
       {/* Mobile menu */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 shadow-lg">
-          {['About', 'Projects', 'Articles', 'Contact'].map((item) => (
+          {['About', 'Projects', 'Publications', 'Articles', 'Contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
             </button>
           ))}
           <a
-            href="https://drive.google.com/file/d/19WGRhqhNWSNaD_nFhPzpMWdnz3ai2tPR/view?usp="
+            href="https://drive.google.com/file/d/1KVk5B0BOnCLQAkGN-hmkd68tIKW9d_sp/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"

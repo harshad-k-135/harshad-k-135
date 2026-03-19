@@ -1,18 +1,27 @@
 export interface Project {
   title: string;
+  subtitle: string;
   description: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
-  imageUrl?: string;
+  badge?: string;
 }
 
-export interface Articles {
+export interface Article {
   title: string;
   description: string;
-  mediumUrl?: string;
+  link: string;
+  readingTime?: string;
 }
 
+export interface Publication {
+  title: string;
+  venue: string;
+  date: string;
+  description: string;
+  link?: string;
+}
 
 export interface SocialLink {
   name: string;
