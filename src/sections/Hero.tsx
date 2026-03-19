@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
               {/* CTA Buttons */}
               <div className="mt-10 flex flex-row gap-4 justify-center md:justify-start">
                 <a 
-              href="https://drive.google.com/file/d/1KVk5B0BOnCLQAkGN-hmkd68tIKW9d_sp/view?usp=sharing"
+              href="https://drive.google.com/file/d/1GM9S4asQM5EMiFEBpp0tpbQupqZRdEV4/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-indigo-600 dark:bg-indigo-500 text-white rounded-xl shadow-lg shadow-indigo-500/20 hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-all duration-300 font-bold text-lg"

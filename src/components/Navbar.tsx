@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                 </button>
               ))}
               <a
-            href="https://drive.google.com/file/d/1KVk5B0BOnCLQAkGN-hmkd68tIKW9d_sp/view?usp=sharing"
+            href="https://drive.google.com/file/d/1GM9S4asQM5EMiFEBpp0tpbQupqZRdEV4/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
             </button>
           ))}
           <a
-            href="https://drive.google.com/file/d/1KVk5B0BOnCLQAkGN-hmkd68tIKW9d_sp/view?usp=sharing"
+            href="https://drive.google.com/file/d/1GM9S4asQM5EMiFEBpp0tpbQupqZRdEV4/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"
