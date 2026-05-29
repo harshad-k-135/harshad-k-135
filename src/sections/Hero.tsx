@@ -1,83 +1,112 @@
 import React from 'react';
-import { ArrowDown } from 'lucide-react';
+import { Mail, Github, Linkedin, FileText } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (projectsSection) projectsSection.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const renderLetters = (word: string) =>
+    word.split('').map((ch, idx) => (
+      <span className="btn-letter" key={`${word}-${idx}`}>
+        {ch}
+      </span>
+    ));
+
   return (
-    <section
-      id="hero"
-      className="min-h-screen flex items-center relative overflow-hidden pt-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"
-    >
-      {/* Background blobs */}
-      <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-indigo-600 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-72 h-72 bg-blue-400 rounded-full filter blur-3xl"></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
-        <div className="text-center md:text-left">
-          {/* Responsive layout */}
-          <div className="flex flex-col-reverse md:flex-row items-center justify-between h-auto md:h-[45vh]">
-            {/* Text content */}
-            <div className="mt-6 md:mt-0">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-                <span className="block">Harshad Manish Karle</span>
-              </h1>
-              <p className="mt-4 max-w-2xl mx-auto md:mx-0 text-xl text-gray-600 dark:text-gray-300">
-                I build Agentic AI systems that ship — multi-agent pipelines, 
-                multimodal research, and production CV at scale.
-              </p>
-
-              {/* CTA Buttons */}
-              <div className="mt-10 flex flex-row gap-4 justify-center md:justify-start">
-                <a 
-              href="https://resumego.link/hmk1305"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-indigo-600 dark:bg-indigo-500 text-white rounded-xl shadow-lg shadow-indigo-500/20 hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-all duration-300 font-bold text-lg"
+    <section id="hero" className="min-h-[72vh] flex items-center py-20">
+      <div className="max-w-6xl mx-auto px-6 w-full z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
             >
-              View Resume
-            </a>
-                <button
-                  onClick={scrollToProjects}
-                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-indigo-600 dark:border-indigo-500 text-indigo-600 dark:text-indigo-400 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-all duration-300 font-medium"
-                >
-                  See Projects
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-white/90 to-white/60">
+                "I engineer systems that don't fail
+                <br className="hidden sm:block" /> when you're not watching."
+              </h1>
+            </motion.div>
+
+            <p className="mt-5 text-white/60 max-w-2xl text-base sm:text-lg leading-relaxed">
+              I design production-grade pipelines for reliable retrieval, efficient
+              inference, and robust orchestration across cloud and edge.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <div className="btn-wrapper">
+                <button className="btn px-6 py-3.5 focus:outline-none" type="button" onClick={scrollToProjects} aria-label="See projects">
+                  <svg className="btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                  </svg>
+                  <div className="txt-wrapper">
+                    <div className="txt-1 text-sm font-semibold tracking-wide">
+                      {renderLetters('Projects')}
+                    </div>
+                    <div className="txt-2 text-sm font-semibold tracking-wide">
+                      {renderLetters('Open')}
+                    </div>
+                  </div>
                 </button>
               </div>
-            </div>
 
-            {/* Image */}
-            <div className="mb-6 md:mb-0 md:mr-10">
-              <img
-                className="h-[300px] md:h-[350px] w-auto rounded-[25px] object-cover"
-                src="https://github.com/harshad-k-135/harshad-k-135/blob/main/new.jpg?raw=true"
-                alt="Harshad Karle"
-              />
+              {[{
+                href: 'https://github.com/harshad-k-135',
+                label: 'GitHub',
+                icon: <Github size={16} />,
+                external: true,
+              }, {
+                href: 'https://www.linkedin.com/in/harshadkarle1305/',
+                label: 'LinkedIn',
+                icon: <Linkedin size={16} />,
+                external: true,
+              }, {
+                href: 'https://resumego.link/hmk1305',
+                label: 'Resume',
+                icon: <FileText size={16} />,
+                external: true,
+              }, {
+                href: 'mailto:harshadkarle1305@gmail.com',
+                label: 'Email',
+                icon: <Mail size={16} />,
+                external: false,
+              }].map(({ href, label, icon, external }) => (
+                <div className="btn-wrapper" key={label}>
+                  <a
+                    href={href}
+                    {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    className="btn px-5 py-3.5 focus:outline-none"
+                    aria-label={label}
+                  >
+                    <span className="btn-svg inline-flex items-center justify-center">{icon}</span>
+                    <div className="txt-wrapper">
+                      <div className="txt-1 text-sm font-semibold tracking-wide">{renderLetters(label)}</div>
+                      <div className="txt-2 text-sm font-semibold tracking-wide">{renderLetters('Open')}</div>
+                    </div>
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Scroll Down Indicator */}
-          <div className="mt-20 flex justify-center">
-            <button
-              onClick={scrollToAbout}
-              className="animate-bounce p-2 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+          <div className="flex justify-center md:justify-end">
+            <motion.div
+              className="relative border-gradient rounded-3xl p-2 stealth-surface"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.08 }}
             >
-              <ArrowDown size={24} />
-            </button>
+              <img
+                src="https://github.com/harshad-k-135/harshad-k-135/blob/main/new.jpg?raw=true"
+                alt="portrait"
+                className="w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] rounded-2xl object-cover border border-white/10"
+              />
+            </motion.div>
           </div>
         </div>
       </div>

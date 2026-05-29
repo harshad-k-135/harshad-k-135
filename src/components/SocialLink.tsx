@@ -13,10 +13,10 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, icon: Icon, label }) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-md shadow-sm hover:shadow-md transition-all duration-300 hover:translate-y-[-2px]"
+      className="inline-flex items-center gap-2 px-4 py-3 rounded-full border border-white/10 bg-white/5 text-white/80 hover:text-white hover:bg-white/10 hover:border-orange-500/25 transition-all duration-300"
       aria-label={label}
     >
-      <Icon size={20} className="text-indigo-600 dark:text-indigo-400" />
+      <Icon size={18} className="text-orange-300" />
       <span>{label}</span>
     </a>
   );

@@ -2,6 +2,12 @@ import { Article } from '../types/types';
 
 export const articles: Article[] = [
   {
+    title: 'Why Most AI Projects Fail After the Demo Stage',
+    description: 'A systems-first breakdown of why AI demos collapse in production, covering hallucinations, latency, cost, observability, retrieval, infrastructure, memory, and evaluation.',
+    link: 'https://medium.com/@harshadkarle1305/why-most-ai-projects-fail-after-the-demo-stage-2faf09425dc8',
+    readingTime: '10 min read'
+  },
+  {
     title: 'Agent Orchestration: From Autonomous Dreams to Real Multi-Agent Systems',
     description: 'A deep dive into the evolution of AI agents and the transition from single-prompt interactions to sophisticated multi-agent orchestration frameworks.',
     link: 'https://medium.com/@harshadkarle1305/agent-orchestration-from-autonomous-dreams-to-real-multi-agent-systems-f7bda51d431b',

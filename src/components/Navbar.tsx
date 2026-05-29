@@ -35,13 +35,13 @@ const Navbar: React.FC = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md' : 'bg-transparent'
+        scrolled ? 'bg-black/65 backdrop-blur-md border-b border-white/5' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex-shrink-0 font-bold text-xl tracking-tighter cursor-pointer" onClick={() => scrollToSection('hero')}>
-            <span className="text-indigo-600 dark:text-indigo-400">Harshad</span>.Karle
+          <div className="flex-shrink-0 font-semibold text-xl tracking-tight cursor-pointer text-white" onClick={() => scrollToSection('hero')}>
+            <span className="text-orange-400">Harshad</span>.Karle
           </div>
           
           {/* Desktop menu */}
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 font-medium transition-colors"
+                  className="text-white/70 hover:text-orange-300 px-3 py-2 font-medium transition-colors"
                 >
                   {item}
                 </button>
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
             href="https://resumego.link/hmk1305"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"
+            className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-orange-100 hover:bg-white/10 hover:text-orange-50 transition"
           >
           Resume
           </a>
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+              className="text-white/80 hover:text-orange-300"
               onClick={toggleMenu}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -82,12 +82,12 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 shadow-lg">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95 border-b border-white/10">
           {['About', 'Projects', 'Publications', 'Articles', 'Contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
-              className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"
+              className="block w-full text-left px-3 py-2 text-white/80 hover:text-orange-300 font-medium"
             >
               {item}
             </button>
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
             href="https://resumego.link/hmk1305"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full text-left px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium"
+            className="block w-full text-left px-3 py-2 text-white/80 hover:text-orange-300 font-medium"
           >
           Resume
           </a>

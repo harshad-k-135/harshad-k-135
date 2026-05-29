@@ -6,17 +6,17 @@ import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <AnimatedSection id="contact" className="py-20 bg-white dark:bg-gray-900">
+    <AnimatedSection id="contact" className="py-20 bg-transparent">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
           title="Get in Touch" 
           subtitle="Open to Agentic AI internships, Applied AI research roles, and collaborations. Currently available from June 2026."
         />
         
-        <div className="mt-12 bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-800">
+        <div className="mt-12 bg-white/[0.02] rounded-2xl shadow-xl overflow-hidden border border-white/10">
           <div className="p-8 md:p-12 text-center">
             <div className="mb-10">
-              <p className="text-xl font-medium text-gray-900 dark:text-white mb-2">
+              <p className="text-xl font-medium text-white mb-2">
                 Best way to reach me is LinkedIn or email.
               </p>
             </div>
@@ -44,10 +44,10 @@ const Contact: React.FC = () => {
               />
             </div>
             
-            <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
+            <div className="pt-8 border-t border-white/10">
               <a 
                 href="mailto:harshadkarle1305@gmail.com"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 dark:bg-indigo-500 text-white rounded-xl shadow-lg shadow-indigo-500/20 hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-all duration-300 font-bold text-lg"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-orange-500/90 text-black rounded-xl shadow-lg shadow-orange-500/20 hover:bg-orange-400 transition-all duration-300 font-bold text-lg"
               >
                 <Mail size={20} />
                 Email Me Directly

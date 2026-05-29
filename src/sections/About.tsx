@@ -1,93 +1,113 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedSection from '../components/AnimatedSection';
-import { 
-  Code, Brain, BookOpen, GraduationCap, Award, 
-  Bot, Eye, Layers, MessageSquare, FileText, 
-  Cpu, Laptop 
-} from 'lucide-react';
+
+const spectrumPoints = [
+  {
+    title: 'Inference Efficiency',
+    subtitle: 'Constrained hardware',
+    x: 24,
+    y: 22,
+    reason: 'I care about squeezing reliable performance out of limited memory, latency, and deployment budgets.',
+  },
+  {
+    title: 'Pipelines + Orchestration',
+    subtitle: 'Capability with control',
+    x: 74,
+    y: 24,
+    reason: 'When systems get more capable, the orchestration layer becomes the thing that keeps them usable.',
+  },
+  {
+    title: 'Retrieval Grounding',
+    subtitle: 'Trust under pressure',
+    x: 26,
+    y: 74,
+    reason: 'Grounding matters most when the system has to answer accurately, not just confidently.',
+  },
+  {
+    title: 'Systems + Backends',
+    subtitle: 'Unconstrained software',
+    x: 76,
+    y: 76,
+    reason: 'I design for the backend trade-space where reliability, throughput, and maintainability intersect.',
+  },
+];
 
 const About: React.FC = () => {
-  const skills = [
-    { name: 'Artificial Intelligence', icon: Brain },
-    { name: 'Machine Learning', icon: Laptop },
-    { name: 'Natural Language Processing', icon: Code },
-    { name: 'Agentic AI', icon: Bot },
-    { name: 'Computer Vision', icon: Eye },
-    { name: 'Multimodal AI', icon: Layers },
-    { name: 'LLM Systems', icon: MessageSquare },
-    { name: 'Research & Publications', icon: FileText },
-  ];
-
-  const tools = [
-    'Python', 'TensorFlow', 'PyTorch', 'C/C++', 'Pandas', 'Numpy', 
-    'Sklearn', 'Matplotlib', 'Java', 'Unity', 'OpenCV', 'CrewAI', 
-    'LangChain', 'FastAPI', 'HuggingFace', 'Groq', 'YOLO', 'Docker', 'LLMs'
-  ];
-
   return (
-    <AnimatedSection id="about" className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle title="About Me" />
+    <AnimatedSection id="about" className="py-16 bg-transparent">
+      <div className="max-w-6xl mx-auto px-6">
+        <SectionTitle
+          title="The Spectrum"
+          subtitle="Constraint-aware design lives in the tension between hardware limits and systems capability."
+        />
 
-        <div className="flex flex-col md:flex-row gap-10 mt-12">
-          <div className="md:w-1/2">
-            <div className="space-y-4 text-gray-600 dark:text-gray-300">
-              <p className="text-lg leading-relaxed">
-                I'm a third-year Electronics & Computer Engineering student at 
-                PICT Pune (GPA: 9.19/10) with production experience in Agentic AI, 
-                Computer Vision, and Multimodal ML. I've shipped real systems — 
-                a 4-agent research pipeline, a production CV system achieving 
-                mAP@50-95 of 0.985, and ongoing multimodal research under faculty 
-                guidance with a paper in preparation. I care about architecture 
-                decisions, not just working code.
-              </p>
+        <div className="mt-8 rounded-3xl border border-white/10 bg-white/[0.02] p-5 md:p-7 overflow-hidden">
+          <div className="relative h-[540px] md:h-[620px] rounded-2xl border border-white/5 bg-black/20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(251,146,60,0.08),_transparent_45%)]" />
+            <div className="absolute inset-0 grid-mask-bg opacity-40" />
+
+            <svg className="absolute inset-0 z-10 h-full w-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <filter id="axis-glow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="0.55" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <line x1="50" y1="10" x2="50" y2="90" stroke="rgba(251,191,36,0.08)" strokeWidth="0.55" strokeLinecap="round" filter="url(#axis-glow)" />
+              <line x1="10" y1="50" x2="90" y2="50" stroke="rgba(251,191,36,0.08)" strokeWidth="0.55" strokeLinecap="round" filter="url(#axis-glow)" />
+              <line x1="50" y1="10" x2="50" y2="90" stroke="rgba(251,191,36,0.72)" strokeWidth="0.45" strokeLinecap="round" />
+              <line x1="10" y1="50" x2="90" y2="50" stroke="rgba(251,191,36,0.72)" strokeWidth="0.45" strokeLinecap="round" />
+            </svg>
+
+            <div className="absolute left-4 top-4 md:left-6 md:top-6 text-[10px] uppercase tracking-[0.32em] text-yellow-200 drop-shadow-[0_0_8px_rgba(251,191,36,0.45)] z-20">
+              Constraint vs Sophistication
+            </div>
+            <div className="absolute left-1/2 top-[5%] -translate-x-1/2 text-[10px] uppercase tracking-[0.32em] text-yellow-200 drop-shadow-[0_0_8px_rgba(251,191,36,0.45)] z-20 whitespace-nowrap">
+              More capability ↑
+            </div>
+            <div className="absolute left-1/2 bottom-[5%] -translate-x-1/2 text-[10px] uppercase tracking-[0.32em] text-yellow-200 drop-shadow-[0_0_8px_rgba(251,191,36,0.45)] z-20 whitespace-nowrap">
+              Fewer constraints ↓
+            </div>
+            <div className="absolute left-[4%] top-2/3 -translate-y-1/2 -rotate-90 text-[10px] uppercase tracking-[0.3em] text-yellow-200 drop-shadow-[0_0_8px_rgba(251,191,36,0.45)] origin-left z-20 whitespace-nowrap">
+              Constrained hardware
+            </div>
+            <div className="absolute right-[4%] top-2/3 -translate-y-1/2 rotate-90 text-[10px] uppercase tracking-[0.3em] text-yellow-200 drop-shadow-[0_0_8px_rgba(251,191,36,0.45)] origin-right z-20 bg-black/20 px-1 rounded whitespace-nowrap">
+              Unconstrained software
             </div>
 
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-6 flex items-center">
-              <GraduationCap size={24} className="mr-2 text-indigo-600 dark:text-indigo-400" />
-              Education
-            </h3>
-            <div className="space-y-4">
-              <div className="border-l-4 border-indigo-600 dark:border-indigo-400 pl-4">
-                <h4 className="font-bold text-gray-900 dark:text-white text-lg">B.E. in Electronics and Computer Engineering</h4>
-                <p className="text-gray-600 dark:text-gray-300">Pune Institute of Computer Technology (PICT), 2023-Present</p>
-                <p className="text-gray-600 dark:text-gray-300 italic">GPA: 9.19/10</p>
-                <p className="text-gray-600 dark:text-gray-300 mt-1">Focus: AI-ML, Computer Vision, Agentic Systems, Electronics</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-              <Award size={24} className="mr-2 text-indigo-600 dark:text-indigo-400" />
-              Skills & Expertise
-            </h3>
-            
-            <div className="space-y-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {skills.map((skill, index) => (
-                  <div key={index} className="flex items-center p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-sm transition-all border border-transparent hover:border-indigo-100 dark:hover:border-indigo-900">
-                    <skill.icon size={20} className="mr-3 text-indigo-600 dark:text-indigo-400" />
-                    <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
+            {spectrumPoints.map((point, index) => (
+              <motion.button
+                key={point.title}
+                type="button"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.5, delay: index * 0.08, ease: 'easeOut' }}
+                className="group absolute -translate-x-1/2 -translate-y-1/2 text-left"
+                style={{ left: `${point.x}%`, top: `${point.y}%` }}
+                aria-label={`${point.title}: ${point.reason}`}
+              >
+                <div className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative flex items-center gap-3">
+                  <span className="relative flex h-4 w-4">
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-orange-400/40 animate-ping" />
+                    <span className="relative inline-flex h-4 w-4 rounded-full border border-orange-300 bg-orange-500 shadow-[0_0_18px_rgba(251,146,60,0.35)]" />
+                  </span>
+                  <div className="rounded-2xl border border-white/10 bg-black/70 px-3 py-2 shadow-2xl shadow-black/30 backdrop-blur-md transition-all duration-300 group-hover:border-orange-500/30 group-hover:-translate-y-0.5">
+                    <div className="text-sm font-medium text-white">{point.title}</div>
+                    <div className="text-[11px] uppercase tracking-[0.24em] text-orange-300/70">{point.subtitle}</div>
+                    <div className="mt-2 max-w-[220px] text-xs leading-relaxed text-white/60 opacity-0 max-h-0 overflow-hidden transition-all duration-300 group-hover:opacity-100 group-hover:max-h-24">
+                      {point.reason}
+                    </div>
                   </div>
-                ))}
-              </div>
-           
-              <div>
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                   <Code size={20} className="mr-2 text-indigo-600 dark:text-indigo-400" />
-                   Programming Languages & Tools
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {tools.map((item, index) => (
-                    <span key={index} className="px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-800 rounded-full text-sm font-medium hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors">
-                      {item}
-                    </span>
-                  ))}
                 </div>
-              </div>
-            </div>
+              </motion.button>
+            ))}
           </div>
         </div>
       </div>

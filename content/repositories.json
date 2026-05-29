@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://github.com/harshad-k-135/groundwork_ai",
+    "featured": true,
+    "categoryHint": "AI Systems"
+  },
+  {
+    "url": "https://github.com/harshad-k-135/autonomous_vehicular_simulation",
+    "featured": false,
+    "categoryHint": "Computer Vision"
+  },
+  {
+    "url": "https://github.com/harshad-k-135/mail_generator",
+    "featured": false,
+    "categoryHint": "LLM Apps"
+  },
+  {
+    "url": "https://github.com/harshad-k-135/price_prediction",
+    "featured": false,
+    "categoryHint": "ML Systems"
+  },
+  {
+    "url": "https://github.com/harshad-k-135/face-recognition",
+    "featured": false,
+    "categoryHint": "Computer Vision"
+  },
+  {
+    "url": "https://github.com/harshad-k-135/gesture-controlled-pointer",
+    "featured": false,
+    "categoryHint": "Computer Vision"
+  }
+]

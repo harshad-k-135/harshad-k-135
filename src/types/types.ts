@@ -1,11 +1,24 @@
 export interface Project {
   title: string;
-  subtitle: string;
-  description: string;
-  technologies: string[];
-  githubUrl?: string;
+  shortDescription: string;
+  longDescription: string;
+  stack: string[];
+  githubUrl: string;
+  demoUrl?: string;
+  featured: boolean;
+  tags: string[];
+  architectureNotes: string[];
+  learnings: string[];
+  category: string;
+  summary?: string;
+  reviewStatus?: 'ready' | 'needs-review';
+  subtitle?: string;
+  description?: string;
+  technologies?: string[];
   liveUrl?: string;
   badge?: string;
+  architecture?: string;
+  impact?: string;
 }
 
 export interface Article {

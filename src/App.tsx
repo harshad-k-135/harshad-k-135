@@ -1,45 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
+import React from 'react';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Projects from './sections/Projects';
+import Experience from './sections/Experience';
 import Publications from './sections/Publications';
 import Articles from './sections/Articles';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
-import ThemeToggle from './components/ThemeToggle';
 
 function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    } else if (prefersDark) {
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-  };
-
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-      <Navbar />
-      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-      <main>
+    <div className="min-h-screen bg-[#050505] text-white transition-colors duration-300">
+      <div className="fixed top-0 w-full h-screen -z-10 bg-black">
+        <div className="absolute top-0 inset-x-0 h-[500px] w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-900/20 via-black to-black opacity-50" />
+        <div className="absolute inset-0 grid-mask-bg" />
+      </div>
+
+      <main className="relative z-10">
         <Hero />
         <About />
         <Projects />
+        <Experience />
         <Publications />
         <Articles />
         <Contact />
